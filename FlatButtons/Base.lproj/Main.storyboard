@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="FlatButtons" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEz-tc-5Gj">
+                                <rect key="frame" x="200" y="341" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.40096702558606989" green="0.82379590850515461" blue="0.41147177575031502" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="85u-5z-PFH"/>
+                                    <constraint firstAttribute="width" constant="200" id="MN7-Ve-e9n"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="GOOD BUTTON">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goodButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DB4-cb-BRv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idQ-tc-jKb">
+                                <rect key="frame" x="200" y="214" width="200" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="OVN-cN-kMi"/>
+                                    <constraint firstAttribute="height" constant="40" id="YWZ-QO-ah3"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="BAD BUTTON">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="badButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xTp-fj-mZG"/>
+                                    <action selector="buttonHightlight:" destination="vXZ-lx-hvc" eventType="touchDown" id="3sM-Lo-nWr"/>
+                                    <action selector="buttonHightlight:" destination="vXZ-lx-hvc" eventType="touchDragInside" id="Rv3-yq-YqF"/>
+                                    <action selector="buttonNormal:" destination="vXZ-lx-hvc" eventType="touchDragOutside" id="Cwx-PK-Ril"/>
+                                    <action selector="buttonNormal:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jUY-vS-oxj"/>
+                                    <action selector="buttonNormal:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="lTe-D6-kyx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="QEz-tc-5Gj" secondAttribute="centerX" id="AQC-TJ-Xcn"/>
+                            <constraint firstAttribute="centerY" secondItem="QEz-tc-5Gj" secondAttribute="centerY" constant="-61" id="Dum-yd-PIq"/>
+                            <constraint firstAttribute="centerX" secondItem="idQ-tc-jKb" secondAttribute="centerX" id="XTH-Lx-Oih"/>
+                            <constraint firstAttribute="centerY" secondItem="idQ-tc-jKb" secondAttribute="centerY" constant="66" id="Ygt-51-HzU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="badButton" destination="idQ-tc-jKb" id="fR8-oi-31u"/>
+                        <outlet property="goodButton" destination="QEz-tc-5Gj" id="bbE-rB-VUb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
