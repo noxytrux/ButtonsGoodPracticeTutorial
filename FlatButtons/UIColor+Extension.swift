@@ -10,12 +10,7 @@ import UIKit
 
 extension UIColor {
 
-    class func colorWithHex(hexString: String?) -> UIColor? {
-    
-        return colorWithHex(hexString, alpha: 1.0)
-    }
-
-    class func colorWithHex(hexString: String?, alpha: CGFloat) -> UIColor? {
+    class func colorWithHex(hexString: String?, alpha: CGFloat = 1.0) -> UIColor? {
         
         if let hexString = hexString {
         
